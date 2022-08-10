@@ -1,0 +1,36 @@
+#navbar{
+    background-color: rgb(0, 1, 53);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10%;
+}
+
+li, a, button{
+    font-family: "MusticaPro-SemiBold";
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+li a{
+    transition: all 0.3s ease 0s;
+}
+li a:hover{
+    color:rgb(255, 2, 2) 
+}
+li a.active{
+    color:rgb(255, 2, 2)   
+}
+#logo {
+    cursor: pointer;
+    max-width: 110px;
+    max-height: 120px;
+    margin-top: 20%;
+}

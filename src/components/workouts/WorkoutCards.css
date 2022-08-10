@@ -1,0 +1,43 @@
+.grid-container {
+  position: relative;
+  width:250px;
+}
+  .card {
+    width: 400px;
+    overflow: hidden;
+    color: #000;
+    border-radius: 7px;
+    box-shadow: -4px -4px 20px rgba(0, 0, 0, 0.505);
+    margin: 1rem;
+    border: 2px solid rgb(0,236,236);
+  
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    text-align: center;
+    background-color: rgb(21, 21, 21);
+    
+  }  
+  h3{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    margin: 12px 0;
+    text-align: center;
+  }
+  p{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    margin: 12px 0;
+    text-align: center;
+    line-height: 25px;
+  }
+  button {
+    border: 1px solid;
+    border-radius: 0px;
+    background-color:rgb(0,236,236);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 30%;
+    cursor: pointer;
+  }
