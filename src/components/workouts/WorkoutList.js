@@ -14,7 +14,7 @@ const WorkoutList = () => {
     });
   },[])
 
-  const deleteCard = workout => {
+  const deleteWorkout = workout => {
     setWorkouts(workouts.filter(workouts => workouts.id !== workout.id))
   }
 
@@ -22,7 +22,7 @@ const WorkoutList = () => {
   return (
     <div>
         {workouts.map((workout) => (
-                <WorkoutCards key={workout.id} workout={workout} deleteCard={deleteCard} />
+                <WorkoutCards key={workout.id} workout={workout} deleteWorkout={deleteWorkout} />
                 ))}
     </div>
   )

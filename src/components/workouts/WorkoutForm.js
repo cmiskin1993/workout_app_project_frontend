@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { baseUrl, headers } from '../../Globals';
 import '../workouts/Forms.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -43,9 +42,13 @@ const params = {
       name: exercise
     }
   }
-fetch (baseUrl + "/workouts", {
-  method: 'POST',
-  headers,
+
+fetch ("http://localhost:9292/workouts", {
+  method: "POST",
+  headers: {
+  "Accept": "application/json",
+  "Content-Type": "application/json",
+  },
   body: JSON.stringify(params)
   })
   .then(resp => resp.json())
@@ -61,15 +64,12 @@ fetch (baseUrl + "/workouts", {
         <form  id="form-container" onSubmit={ handleSubmit } >
                 <div> 
                 <label>Workout:</label>
-                    <input type="string" name='workout' id="workout" value={ workout } onChange={ e => setWorkout(e.target.value) } />
+                    <input type="string" name='workout' id="workout" key={workout.id} value={ workout } onChange={ e => setWorkout(e.target.value) } />
                   </div>
 
                   <label>Exercise:</label>
                 <div>
                   <input type="string" name='exercise' id="exercise" value={ exercise } onChange={ e => setExercise(e.target.value) }  />
-                      <input type="string" name='amount' id="amount" value={ amount } onChange={ e => setAmount(e.target.value) }  />
-
-                  <input type="string" name='exercise' id="exercise" value={ exercise } onChange={ e => setExercise(e.target.value) } />
                       <input type="string" name='amount' id="amount" value={ amount } onChange={ e => setAmount(e.target.value) }  />
                 </div>
                   {

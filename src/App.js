@@ -5,14 +5,13 @@ import Navbar from "./components/navigation/Navbar";
 import WorkoutForm from './components/workouts/WorkoutForm';
 import WorkoutList from './components/workouts/WorkoutList';
 import { useEffect, useState } from 'react';
-import {baseUrl} from './Globals';
 
 function App() {
 
   const [workouts, setWorkouts] = useState([])
 
   useEffect (() => {
-    fetch(baseUrl + '/workouts')
+    fetch("http://localhost:9292/workouts")
     .then(resp => resp.json())
     .then(data => setWorkouts(data))
   }, []) 
@@ -22,6 +21,8 @@ function App() {
 
   }
 
+
+
   
   return (
 
@@ -29,7 +30,7 @@ function App() {
     <Navbar></Navbar>
       <Routes>
         <Route path="/" element={ <Home /> } />
-        <Route path="/my-workouts" element={ <WorkoutList workouts ={ workouts } /> } />
+        <Route path="/my-workouts" element={ <WorkoutList workouts={ workouts }  /> } />
         <Route path="/workouts/new" element={ <WorkoutForm  addWorkout={ addWorkout } /> } />
 
 
