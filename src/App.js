@@ -3,35 +3,27 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./components/static/Home";
 import Navbar from "./components/navigation/Navbar";
 import WorkoutForm from './components/workouts/WorkoutForm';
+import ExerciseForm from './components/exercises/ExerciseForm';
 import WorkoutList from './components/workouts/WorkoutList';
-import { useEffect, useState } from 'react';
+import ExerciseList from './components/exercises/ExerciseList';
+import PageNotFound from './components/static/PageNotFound';
+
 
 function App() {
 
-  const [workouts, setWorkouts] = useState([])
 
-  useEffect (() => {
-    fetch("http://localhost:9292/workouts")
-    .then(resp => resp.json())
-    .then(data => setWorkouts(data))
-  }, []) 
-
-  const addWorkout = workout => {
-    setWorkouts([...workouts, workout]);
-
-  }
-
-
-
-  
   return (
 
     <Router>
     <Navbar></Navbar>
       <Routes>
         <Route path="/" element={ <Home /> } />
-        <Route path="/my-workouts" element={ <WorkoutList workouts={ workouts }  /> } />
-        <Route path="/workouts/new" element={ <WorkoutForm  addWorkout={ addWorkout } /> } />
+        <Route path="/workouts" element={ <WorkoutList /> } />
+        <Route path="/workouts/new" element={ <WorkoutForm  /> } />
+        <Route path="/exercises" element={ <ExerciseList /> } />
+        <Route path="/exercises/new" element={ <ExerciseForm  /> } />
+
+        <Route component={ PageNotFound } />
 
 
       </Routes>

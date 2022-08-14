@@ -9,8 +9,8 @@ const WorkoutList = () => {
     useEffect(() => {
     fetch(baseUrl + "/workouts")
     .then((resp) => resp.json())
-    .then((workoutsArray) => {;
-      setWorkouts(workoutsArray)
+    .then((data) => {;
+      setWorkouts(data)
     });
   },[])
 
@@ -25,7 +25,12 @@ const WorkoutList = () => {
                 <WorkoutCards key={workout.id} workout={workout} deleteWorkout={deleteWorkout} />
                 ))}
     </div>
+    
   )
 }
 
 export default WorkoutList
+
+// {exercises.map((exercises) => (
+//   <WorkoutCards key={exercise.id} exercise={exercise}  />
+//   ))}
