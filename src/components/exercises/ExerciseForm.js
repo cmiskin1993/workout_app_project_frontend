@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { baseUrl } from '../../Globals';
 
 const ExerciseForm = () => {
+
   const [workout, setWorkout] = useState(null);
   const [state, setState] = useState({
     name: "",
@@ -50,9 +51,10 @@ const ExerciseForm = () => {
   return (
     <div>
       <form  id="form-container" onSubmit={ handleSubmit }>
+      <h2>Create Exercise {workout} </h2>
         <div>
           <label> Exercise: </label>
-          <input type="text" name="exercise"  value={ state.name } onChange={ handleChange } />
+          <input type="text" name="exercise" value={ state.name } onChange={ handleChange } />
         </div>
  
         <div>

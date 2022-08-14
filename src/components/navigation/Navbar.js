@@ -12,13 +12,7 @@ const Navbar = () => {
             <NavLink to="/workouts">Workouts</NavLink>
           </li>
           <li>
-            <NavLink to="/exercises">Exercises</NavLink>
-          </li>
-          <li>
               <NavLink to="/workouts/new">Create My Workout</NavLink>
-          </li>
-          <li>
-              <NavLink to="/exercises/new">Create My Exercise</NavLink>
           </li>
         </ul>
     </div>

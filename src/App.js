@@ -7,7 +7,8 @@ import ExerciseForm from './components/exercises/ExerciseForm';
 import WorkoutList from './components/workouts/WorkoutList';
 import ExerciseList from './components/exercises/ExerciseList';
 import PageNotFound from './components/static/PageNotFound';
-
+import WorkoutInfo from './components/workouts/WorkoutInfo';
+import EditWorkout from './components/workouts/EditWorkout';
 
 function App() {
 
@@ -20,11 +21,13 @@ function App() {
         <Route path="/" element={ <Home /> } />
         <Route path="/workouts" element={ <WorkoutList /> } />
         <Route path="/workouts/new" element={ <WorkoutForm  /> } />
-        <Route path="/exercises" element={ <ExerciseList /> } />
-        <Route path="/exercises/new" element={ <ExerciseForm  /> } />
+        <Route path="/workouts/:id" element={ <WorkoutInfo  /> } />
+        <Route path="/workouts/:id/edit" element={ <EditWorkout /> } />
+        <Route path="/workouts/:workoutId/exercises/new" element={ <ExerciseForm />   } />
+        <Route path="/exercises" element= { <ExerciseList  /> } />
 
-        <Route component={ PageNotFound } />
 
+        <Route element={ <PageNotFound /> } />
 
       </Routes>
     </Router>
@@ -33,3 +36,5 @@ function App() {
 }
 
 export default App;
+
+

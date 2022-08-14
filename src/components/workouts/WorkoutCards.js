@@ -1,6 +1,8 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { baseUrl } from '../../Globals'
 import "../workouts/WorkoutCards.css"
+
 
 const WorkoutCards = ({ workout, deleteWorkout }) => {
 
@@ -16,13 +18,16 @@ const WorkoutCards = ({ workout, deleteWorkout }) => {
       })
   }
 
-  return (
-    <div className='grid-container'>
-          <li className="card">
-                <h3> {workout.title} Workout </h3>
-                  <button onClick={handleDelete} >Delete</button>
-          </li>
+  return ( 
+    <div>
+        <div className='grid-container'>
+              <li className="card">
+              <NavLink to={`/workouts/${workout.id}`}>{ workout.title }</NavLink> <br/> <button onClick={handleDelete} >Delete</button>
+              </li>
+        </div>
     </div>
+    
+    
   )
 }
 

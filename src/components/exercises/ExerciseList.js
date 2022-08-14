@@ -14,6 +14,10 @@ const ExerciseList = () => {
       setExercises(data)
     });
   },[])
+
+  const deleteExercise = exercise => {
+    setExercises(exercises.filter(exercises => exercises.id !== exercise.id))
+  }
    
 
 
@@ -21,7 +25,7 @@ const ExerciseList = () => {
   return (
     <div>
       {exercises.map((exercise, index) => (
-  <ExerciseCard key={ index } exercise={ exercise } workout={ exercise.workout }  />
+  <ExerciseCard key={ index } exercise={ exercise } workout={ exercise.workout } deleteExercise={deleteExercise}  />
   ))}
     </div>
   )
