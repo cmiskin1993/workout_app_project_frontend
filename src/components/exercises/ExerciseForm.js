@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import { baseUrl } from '../../Globals';
+import '../exercises/ExerciseForm.css';
 
 const ExerciseForm = () => {
 
@@ -51,10 +52,10 @@ const ExerciseForm = () => {
   return (
     <div>
       <form  id="form-container" onSubmit={ handleSubmit }>
-      <h2>Create Exercise {workout} </h2>
+      <h2>Create Exercise For <br/> {workout.title} Workout </h2>
         <div>
           <label> Exercise: </label>
-          <input type="text" name="exercise" value={ state.name } onChange={ handleChange } />
+          <input type="text" name="name" id='name' value={ state.name } onChange={ handleChange } />
         </div>
  
         <div>

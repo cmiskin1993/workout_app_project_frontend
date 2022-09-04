@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { baseUrl } from '../../Globals';
-import '../workouts/WorkoutForms.css'
+import '../workouts/WorkoutForms.css';
 
 
 
