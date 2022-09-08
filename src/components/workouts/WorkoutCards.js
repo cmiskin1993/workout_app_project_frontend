@@ -22,7 +22,7 @@ const WorkoutCards = ({ workout, deleteWorkout }) => {
     <div>
         <div className='grid-container'>
               <li className="card">
-              <NavLink to={`/workouts/${workout.id}`}>{ workout.title }</NavLink> <br/> <button onClick={handleDelete} >Delete</button>
+              <NavLink id='workout-link' to={`/workouts/${workout.id}`}>{ workout.title }</NavLink> <br/> <button onClick={handleDelete} >Delete</button>
               </li>
         </div>
     </div>

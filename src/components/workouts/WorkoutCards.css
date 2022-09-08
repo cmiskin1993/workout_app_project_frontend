@@ -1,7 +1,4 @@
-.grid-container {
-  position: relative;
-  width:250px;
-}
+
   .card {
     width: 400px;
     overflow: hidden;
@@ -32,12 +29,27 @@
     line-height: 25px;
   }
   button {
+    margin: auto;
+
     border: 1px solid;
     border-radius: 0px;
     background-color:rgb(0,236,236);
     color: rgb(0, 0, 0);
     padding: 10px;
+    margin-top: 10px;
     margin-bottom: 10px;
     width: 30%;
     cursor: pointer;
+    font-size: 15px;
+
+  }
+  button:hover{
+    background-color:rgb(255, 2, 2);
+    color: white;
+  }
+  #edit{
+    color: rgb(0, 0, 0);
+  }
+  #workout-link{
+    font-size: 30px;
   }

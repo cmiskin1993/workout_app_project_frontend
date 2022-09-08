@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { baseUrl } from '../../Globals'
@@ -18,11 +19,10 @@ export const ExerciseCard = ({ exercise, deleteExercise }) => {
   return (
     <div className='grid-container'>
         <li className="card">
-        <NavLink to={`/exercise/${exercise.id}`}> { exercise.name } <br/> Amount: {exercise.amount} <br/> <button onClick={handleDelete} >Delete </button> </NavLink>   
+        <NavLink to={`/exercise/${exercise.id}`}> { exercise.name } <br/> {exercise.amount} <br/> <button onClick={handleDelete} >Delete </button> </NavLink>   
         </li>
     </div>
   )
 }
 
 export default ExerciseCard
-

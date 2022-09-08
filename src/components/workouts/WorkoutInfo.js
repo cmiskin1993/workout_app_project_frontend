@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import { useParams, NavLink } from 'react-router-dom'
 import { baseUrl } from '../../Globals';
 import ExerciseCard from '../exercises/ExerciseCard';
+import "../workouts/WorkoutCards.css"
+
 
 
 
@@ -34,8 +36,8 @@ const WorkoutInfo = () => {
     return (
       <div>
         <h2>{ workout.title }</h2>
-        <button><NavLink to={`/workouts/${ workout.id }/edit`}>Edit Workout</NavLink></button>
-        <button><NavLink to={`/workouts/${ workout.id }/exercises/new`}>Create Exercise</NavLink></button>
+        <button><NavLink id='edit' to={`/workouts/${ workout.id }/edit`}>Edit Workout</NavLink></button>
+        <button><NavLink id='edit' to={`/workouts/${ workout.id }/exercises/new`}>Create Exercise</NavLink></button>
         { exerciseCards }
       </div>
     )
